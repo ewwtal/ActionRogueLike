@@ -7,24 +7,32 @@
   <component name="ChangeListManager">
     <list default="true" id="feec9ab7-0a0d-40b3-86b3-434bd063588d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ActionRogueLike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ActionRogueLike/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/ExplosiveBarrelBP.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/ExplosiveBarrelBP.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/MagicProjectileBP.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ActionRogueLike.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/ActionRogueLike.uproject" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/Maps/TestLevel.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/Maps/TestLevel.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/PlayerCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/PlayerCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ParagonGideon/Characters/Heroes/Gideon/Gideon_AnimBlueprint.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ParagonGideon/Characters/Heroes/Gideon/Gideon_AnimBlueprint.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/TargetDummyBP.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/TargetDummyBP.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Blendspaces/IdleToRun_A_Combat.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Blendspaces/IdleToRun_A_Combat.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ParagonMinions/Characters/Minions/Down_Minions/Meshes/MinionRanged_AnimBP.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ParagonMinions/Characters/Minions/Down_Minions/Meshes/MinionRanged_AnimBP.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/ActionRogueLike.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/ActionRogueLike.Build.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SAttributesComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SAttributesComponent.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SExplosiveBarrel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SExplosiveBarrel.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SMagicProjectile.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SMagicProjectile.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SProjectileBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SProjectileBase.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SAttributesComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SAttributesComponent.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SCharacter.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SExplosiveBarrel.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SExplosiveBarrel.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SMagicProjectile.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SMagicProjectile.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SProjectileBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SProjectileBase.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Source/ActionRogueLike/Private/AI/SAIController.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/ActionRogueLike/Private/AI/SBTTask_RangedAttack.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/ActionRogueLike/Public/AI/SAIController.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/ActionRogueLike/Public/AI/SBTTask_RangedAttack.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -35,15 +43,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "XThreadsFramesViewSplitterKey": "0.67070705",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.9757576&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="C++ Project.ActionRogueLike">
     <configuration name="ActionRogueLike" type="CppProject" factoryName="C++ Project">
       <configuration_1>
@@ -266,7 +274,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1661455026818</updated>
-      <workItem from="1661455034109" duration="4189000" />
+      <workItem from="1661455034109" duration="6019000" />
+      <workItem from="1661531950494" duration="20250000" />
+      <workItem from="1661814034468" duration="15936000" />
     </task>
     <servers />
   </component>
