@@ -6,7 +6,9 @@
 #include "SPowerupActor.h"
 #include "SPowerup_HealthPotion.generated.h"
 
+
 class UStaticMeshComponent;
+
 
 /**
  * 

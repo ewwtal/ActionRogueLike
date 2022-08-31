@@ -2,25 +2,25 @@
 
 
 #include "STargetDummy.h"
+#include "Components/StaticMeshComponent.h"
+#include "SAttributeComponent.h"
 
-#include "SAttributesComponent.h"
 
-// Sets default values
 ASTargetDummy::ASTargetDummy()
 {
 	MeshComp = CreateDefaultSubobject<UStaticMeshComponent>("MeshComp");
 	RootComponent = MeshComp;
 
-	AttributeComp = CreateDefaultSubobject<USAttributesComponent>("AttributeComp");
+	AttributeComp = CreateDefaultSubobject<USAttributeComponent>("AttributeComp");
+	// Trigger when health is changed (damage/healing)
 	AttributeComp->OnHealthChanged.AddDynamic(this, &ASTargetDummy::OnHealthChanged);
 }
 
-void ASTargetDummy::OnHealthChanged(AActor* InstigatorActor, USAttributesComponent* OwningComp, float NewHealth,
-	float Delta)
+
+void ASTargetDummy::OnHealthChanged(AActor* InstigatorActor, USAttributeComponent* OwningComp, float NewHealth, float Delta)
 {
 	if (Delta < 0.0f)
 	{
 		MeshComp->SetScalarParameterValueOnMaterials("TimeToHit", GetWorld()->TimeSeconds);
 	}
 }
-

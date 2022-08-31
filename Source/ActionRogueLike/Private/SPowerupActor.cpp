@@ -2,29 +2,30 @@
 
 
 #include "SPowerupActor.h"
-
-#include "NavigationSystemTypes.h"
 #include "Components/SphereComponent.h"
 
-// Sets default values
+
 ASPowerupActor::ASPowerupActor()
 {
- 	SphereComp = CreateDefaultSubobject<USphereComponent>("SphereComp");
+	SphereComp = CreateDefaultSubobject<USphereComponent>("SphereComp");
 	SphereComp->SetCollisionProfileName("Powerup");
 	RootComponent = SphereComp;
 
 	RespawnTime = 10.0f;
 }
 
+
 void ASPowerupActor::Interact_Implementation(APawn* InstigatorPawn)
 {
-	//logic in derived classes
+	// logic in derived classes...
 }
+
 
 void ASPowerupActor::ShowPowerup()
 {
 	SetPowerupState(true);
 }
+
 
 void ASPowerupActor::HideAndCooldownPowerup()
 {
@@ -37,7 +38,6 @@ void ASPowerupActor::SetPowerupState(bool bNewIsActive)
 {
 	SetActorEnableCollision(bNewIsActive);
 
+	// Set visibility on root and all children
 	RootComponent->SetVisibility(bNewIsActive, true);
 }
-
-

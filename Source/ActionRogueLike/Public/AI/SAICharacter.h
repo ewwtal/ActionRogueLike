@@ -6,8 +6,10 @@
 #include "GameFramework/Character.h"
 #include "SAICharacter.generated.h"
 
+
+class USAttributeComponent;
 class UPawnSensingComponent;
-class USAttributesComponent;
+
 
 UCLASS()
 class ACTIONROGUELIKE_API ASAICharacter : public ACharacter
@@ -15,7 +17,7 @@ class ACTIONROGUELIKE_API ASAICharacter : public ACharacter
 	GENERATED_BODY()
 
 public:
-	// Sets default values for this character's properties
+
 	ASAICharacter();
 
 protected:
@@ -23,15 +25,16 @@ protected:
 	virtual void PostInitializeComponents() override;
 
 	UFUNCTION()
-	void OnHealthChanged(AActor* InstigatorActor, USAttributesComponent* OwningComp, float NewHealth, float Delta);
+	void OnHealthChanged(AActor* InstigatorActor, USAttributeComponent* OwningComp, float NewHealth, float Delta);
 
 	UPROPERTY(VisibleAnywhere, Category = "Components")
-	UPawnSensingComponent* PawnSensingComponent;
-
+	UPawnSensingComponent* PawnSensingComp;
+	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
-	USAttributesComponent* AttributeComp;
+	USAttributeComponent* AttributeComp;
 
+	void SetTargetActor(AActor* NewTarget);
+	
 	UFUNCTION()
 	void OnPawnSeen(APawn* Pawn);
-
 };

@@ -3,7 +3,6 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "SInteractionComponent.h"
 #include "GameFramework/Character.h"
 #include "SCharacter.generated.h"
 
@@ -11,7 +10,7 @@ class UCameraComponent;
 class USpringArmComponent;
 class USInteractionComponent;
 class UAnimMontage;
-class USAttributesComponent;
+class USAttributeComponent;
 class UParticleSystem;
 
 UCLASS()
@@ -21,6 +20,7 @@ class ACTIONROGUELIKE_API ASCharacter : public ACharacter
 
 protected:
 
+	/* VisibleAnywhere = read-only, still useful to view in-editor and enforce a convention. */
 	UPROPERTY(VisibleAnywhere, Category = "Effects")
 	FName TimeToHitParamName;
 
@@ -39,11 +39,12 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "Attack")
 	UAnimMontage* AttackAnim;
 
+	/* Particle System played during attack animation */
 	UPROPERTY(EditAnywhere, Category = "Attack")
 	UParticleSystem* CastingEffect;
 
 	FTimerHandle TimerHandle_PrimaryAttack;
-	FTimerHandle TimerHandle_BlackHoleAttack;
+	FTimerHandle TimerHandle_BlackholeAttack;
 	FTimerHandle TimerHandle_Dash;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Attack")
@@ -59,10 +60,10 @@ protected:
 	USInteractionComponent* InteractionComp;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
-	USAttributesComponent* AttributeComp;
+	USAttributeComponent* AttributeComp;
 
 	void MoveForward(float Value);
-	
+
 	void MoveRight(float Value);
 
 	void PrimaryAttack();
@@ -71,7 +72,7 @@ protected:
 
 	void BlackHoleAttack();
 
-	void BlackHoleAttack_TimeElapsed();
+	void BlackholeAttack_TimeElapsed();
 
 	void Dash();
 
@@ -79,21 +80,20 @@ protected:
 
 	void StartAttackEffects();
 
+	// Re-use spawn logic between attacks
 	void SpawnProjectile(TSubclassOf<AActor> ClassToSpawn);
 
 	void PrimaryInteract();
 
 	UFUNCTION()
-	void OnHealthChanged(AActor* InstigatorActor, USAttributesComponent* OwningComp, float NewHealth, float Delta);
+	void OnHealthChanged(AActor* InstigatorActor, USAttributeComponent* OwningComp, float NewHealth, float Delta);
 
 	virtual void PostInitializeComponents() override;
 
-public:
-	
-	// Sets default values for this character's properties
+public:	
+
 	ASCharacter();
 
-	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 };

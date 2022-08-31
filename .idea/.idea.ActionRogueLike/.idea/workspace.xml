@@ -7,21 +7,82 @@
   <component name="ChangeListManager">
     <list default="true" id="feec9ab7-0a0d-40b3-86b3-434bd063588d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ActionRogueLike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ActionRogueLike/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ActionRogueLike.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/ActionRogueLike.uproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/AI/MinionControllerBP.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/AI/MinionControllerBP.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/AI/MinionRangedBB.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/AI/MinionRangedBB.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/AI/MinionRangedBP.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/AI/MinionRangedBP.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/AI/MinionRangedBT.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/AI/MinionRangedBT.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/AI/QueryContext_AllPlayers.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/AI/QueryContext_AllPlayers.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/AI/QueryContext_TargetActor.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/AI/QueryContext_TargetActor.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/AI/Query_FindBotSpawn.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/AI/Query_FindBotSpawn.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/AI/Query_FindNearbyLocation.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/AI/Query_FindNearbyLocation.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/AI/TestingPawn.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/AI/TestingPawn.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/Audio/Att_Projectiles.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/Audio/Att_Projectiles.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/Audio/MagicProjectileLoop.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/Audio/MagicProjectile_Impact.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/Audio/MagicProjectile_Impact.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/DifficultyCurve.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/DifficultyCurve.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/ExplosiveBarrelBP.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/GameModeBP.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/GameModeBP.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/LeverBP.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/LeverBP.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/Maps/TestLevel.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/Maps/TestLevel.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/Materials/MF_HitFlashDemo.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/Materials/MF_HitFlashDemo.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/Materials/MI_HitFlashDemo_Inst.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/Materials/MI_HitFlashDemo_Inst.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/Materials/MI_PBRDemo_Inst.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/Materials/MI_PBRDemo_Inst.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/Materials/M_DissolveEffect.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/Materials/M_DissolveEffect.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/Materials/M_HealthBar.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/Materials/M_HealthBar.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/Materials/M_HitFlashDemo.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/Materials/M_HitFlashDemo.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/Materials/M_PBRDemo.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/Materials/M_PBRDemo.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/Materials/M_SineWave.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/Materials/M_SineWave.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/Materials/M_SineWaveBP.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/Materials/M_SineWaveBP.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/PlayerCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/PlayerCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/Powerup_HealthPotion.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/Powerup_HealthPotion.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/Proj_BlackHole.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/Proj_BlackHole.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/Proj_Dash.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/Proj_Dash.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/Proj_MagicProjectile.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/Proj_MagicProjectile.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/ProjectileCannon.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/SineWaveBlueprint.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/SineWaveBlueprint.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/TargetDummyBP.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/TargetDummyBP.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Blendspaces/IdleToRun_A_Combat.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Blendspaces/IdleToRun_A_Combat.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ParagonMinions/Characters/Minions/Down_Minions/Meshes/MinionRanged_AnimBP.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ParagonMinions/Characters/Minions/Down_Minions/Meshes/MinionRanged_AnimBP.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/ActionRogueLike.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/ActionRogueLike.Build.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SAttributesComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SAttributesComponent.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/TreasureChest.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/TreasureChest.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/UI/Crosshair_Widget.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/UI/Crosshair_Widget.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/UI/DamagePopup_Widget.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/UI/DamagePopup_Widget.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/UI/PlayerHealth_Widget.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/UI/PlayerHealth_Widget.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ParagonGideon/Characters/Heroes/Gideon/Gideon_AnimBlueprint.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ParagonGideon/Characters/Heroes/Gideon/Gideon_AnimBlueprint.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/ActionRogueLikeGameModeBase.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/ActionRogueLikeGameModeBase.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Private/AI/SAICharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Private/AI/SAICharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Private/AI/SAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Private/AI/SAIController.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Private/AI/SBTService_CheckAttackRange.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Private/AI/SBTService_CheckAttackRange.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Private/AI/SBTTask_RangedAttack.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Private/AI/SBTTask_RangedAttack.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SAttributesComponent.cpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SDashProjectile.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SDashProjectile.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SExplosiveBarrel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SExplosiveBarrel.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SGameModeBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SGameModeBase.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SGameplayInterface.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SGameplayInterface.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SInteractionComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SInteractionComponent.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SItemChest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SItemChest.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SMagicProjectile.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SMagicProjectile.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SPowerupActor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SPowerupActor.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SPowerup_HealthPotion.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SPowerup_HealthPotion.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SProjectileBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SProjectileBase.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SAttributesComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SAttributesComponent.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Private/STargetDummy.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Private/STargetDummy.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Public/AI/SAICharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Public/AI/SAICharacter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Public/AI/SAIController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Public/AI/SAIController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Public/AI/SBTService_CheckAttackRange.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Public/AI/SBTService_CheckAttackRange.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Public/AI/SBTTask_RangedAttack.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Public/AI/SBTTask_RangedAttack.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SAttributesComponent.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SCharacter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SDashProjectile.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SDashProjectile.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SExplosiveBarrel.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SExplosiveBarrel.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SGameModeBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SGameModeBase.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SGameplayInterface.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SGameplayInterface.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SInteractionComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SInteractionComponent.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SItemChest.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SItemChest.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SMagicProjectile.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SMagicProjectile.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SPowerupActor.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SPowerupActor.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SPowerup_HealthPotion.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SPowerup_HealthPotion.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SProjectileBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SProjectileBase.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Public/STargetDummy.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Public/STargetDummy.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -276,7 +337,9 @@
       <updated>1661455026818</updated>
       <workItem from="1661455034109" duration="6019000" />
       <workItem from="1661531950494" duration="20250000" />
-      <workItem from="1661814034468" duration="15936000" />
+      <workItem from="1661814034468" duration="17526000" />
+      <workItem from="1661900390772" duration="3321000" />
+      <workItem from="1661904513915" duration="7664000" />
     </task>
     <servers />
   </component>

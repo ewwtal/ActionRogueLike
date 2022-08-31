@@ -2,72 +2,60 @@
 
 
 #include "SExplosiveBarrel.h"
-
+#include "PhysicsEngine/RadialForceComponent.h"
+#include "Components/StaticMeshComponent.h"
 #include "DrawDebugHelpers.h"
-#include "SAttributesComponent.h"
 
-// Sets default values
-ASExplosiveBarrel::ASExplosiveBarrel(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
+
+ASExplosiveBarrel::ASExplosiveBarrel()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	MeshComp = CreateDefaultSubobject<UStaticMeshComponent>("MeshComp");
+	MeshComp->SetSimulatePhysics(true);
+	RootComponent = MeshComp;
 
-	StaticMeshComp = ObjectInitializer.CreateDefaultSubobject<UStaticMeshComponent>(this, "StaticMeshComp");
-	StaticMeshComp->SetupAttachment(RootComponent);
-	StaticMeshComp->SetCollisionProfileName("PhysicsActor");
-	//StaticMeshComp->OnComponentHit.AddDynamic(this, &ASExplosiveBarrel::OnHit);
-	RadialForceComp = CreateDefaultSubobject<URadialForceComponent>("RadialForceComp");
-	RadialForceComp->SetupAttachment(StaticMeshComp);
-	RadialForceComp->Radius = 700.0f;
-	RadialForceComp->ImpulseStrength = 2000.0f;
-	RadialForceComp->bImpulseVelChange = true;
-	RadialForceComp->bAutoActivate = false;
-	
-	StaticMeshComp->SetSimulatePhysics(true);
+	ForceComp = CreateDefaultSubobject<URadialForceComponent>("ForceComp");
+	ForceComp->SetupAttachment(MeshComp);
+
+	// Leaving this on applies small constant force via component 'tick' (Optional)
+	ForceComp->SetAutoActivate(false);
+
+	ForceComp->Radius = 750.0f;
+	ForceComp->ImpulseStrength = 2500.0f; // Alternative: 200000.0 if bImpulseVelChange = false
+	// Optional, ignores 'Mass' of other objects (if false, the impulse strength will be much higher to push most objects depending on Mass)
+	ForceComp->bImpulseVelChange = true;
+
+	// Optional, default constructor of component already adds 4 object types to affect, excluding WorldDynamic
+	ForceComp->AddCollisionChannelToAffect(ECC_WorldDynamic);
+
+	// Binding either in constructor or in PostInitializeComponents() below
+	//MeshComp->OnComponentHit.AddDynamic(this, &ASExplosiveBarrel::OnActorHit);
 }
 
-// Called when the game starts or when spawned
-void ASExplosiveBarrel::BeginPlay()
-{
-	Super::BeginPlay();
-
-	//StaticMeshComp->OnComponentHit.AddDynamic(this, &ASExplosiveBarrel::OnHit);
-}
 
 void ASExplosiveBarrel::PostInitializeComponents()
 {
+	// Don't forget to call parent function
 	Super::PostInitializeComponents();
-	
-	//StaticMeshComp->OnComponentHit.AddDynamic(this, &ASExplosiveBarrel::OnHit);
-	StaticMeshComp->OnComponentHit.AddUniqueDynamic(this, &ASExplosiveBarrel::OnHit);
+
+	MeshComp->OnComponentHit.AddDynamic(this, &ASExplosiveBarrel::OnActorHit);
 }
 
-// Called every frame
-void ASExplosiveBarrel::Tick(float DeltaTime)
+
+void ASExplosiveBarrel::OnActorHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
-	Super::Tick(DeltaTime);
+	ForceComp->FireImpulse();
 
-}
+	UE_LOG(LogTemp, Log, TEXT("OnActorHit in Explosive Barrel"));
 
-void ASExplosiveBarrel::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor,
-	UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit)
-{
-	RadialForceComp->FireImpulse();
-
-	UE_LOG(LogTemp, Log, TEXT("OnHit in Explosive Barrel"));
-
+	// %s = string
+	// %f = float
+	// logs: "OtherActor: MyActor_1, at gametime: 124.4" 
 	UE_LOG(LogTemp, Warning, TEXT("OtherActor: %s, at game time: %f"), *GetNameSafe(OtherActor), GetWorld()->TimeSeconds);
 
 	FString CombinedString = FString::Printf(TEXT("Hit at location: %s"), *Hit.ImpactPoint.ToString());
 	DrawDebugString(GetWorld(), Hit.ImpactPoint, CombinedString, nullptr, FColor::Green, 2.0f, true);
+	
+	// Detailed info on logging in ue4
+	// https://nerivec.github.io/old-ue4-wiki/pages/logs-printing-messages-to-yourself-during-runtime.html
 
-	if (OtherActor)
-	{
-		USAttributesComponent* AC = Cast<USAttributesComponent>(OtherActor->GetComponentByClass(USAttributesComponent::StaticClass()));
-		if (AC)
-		{
-			AC->ApplyHealthChange(-50.0f);
-		}
-	}
 }
-

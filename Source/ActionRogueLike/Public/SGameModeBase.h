@@ -3,8 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "EnvironmentQuery/EnvQueryTypes.h"
 #include "GameFramework/GameModeBase.h"
+#include "EnvironmentQuery/EnvQueryTypes.h"
 #include "SGameModeBase.generated.h"
 
 class UEnvQuery;
@@ -44,6 +44,6 @@ protected:
 public:
 
 	ASGameModeBase();
-	
+
 	virtual void StartPlay() override;
 };

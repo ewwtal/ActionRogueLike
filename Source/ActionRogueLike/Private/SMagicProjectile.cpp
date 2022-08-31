@@ -2,53 +2,31 @@
 
 
 #include "SMagicProjectile.h"
+#include "SAttributeComponent.h"
+#include "Components/SphereComponent.h"
 
-#include "SAttributesComponent.h"
-#include "Particles/ParticleSystemComponent.h"
 
-// Sets default values
 ASMagicProjectile::ASMagicProjectile()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
-
-	// SphereComp->SetCollisionObjectType(ECC_WorldDynamic);
-	// SphereComp->SetCollisionResponseToAllChannels(ECR_Ignore);
-	// SphereComp->SetCollisionResponseToChannel(ECC_Pawn, ECR_Overlap);
-	SphereComp->SetCollisionProfileName("Projectile");
+	SphereComp->SetSphereRadius(20.0f);
 	SphereComp->OnComponentBeginOverlap.AddDynamic(this, &ASMagicProjectile::OnActorOverlap);
-	
-	MoveComp->InitialSpeed = 1000.0f;
-	MoveComp->bRotationFollowsVelocity = true;
-	MoveComp->bInitialVelocityInLocalSpace = true;
+
+	DamageAmount = 20.0f;
 }
 
-// Called when the game starts or when spawned
-void ASMagicProjectile::BeginPlay()
-{
-	Super::BeginPlay();
-	
-}
 
-void ASMagicProjectile::OnActorOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
-	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+void ASMagicProjectile::OnActorOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	if (OtherActor && OtherActor != GetInstigator())
 	{
-		USAttributesComponent* AttributeComp = Cast<USAttributesComponent>(OtherActor->GetComponentByClass(USAttributesComponent::StaticClass()));
+		USAttributeComponent* AttributeComp = Cast<USAttributeComponent>(OtherActor->GetComponentByClass(USAttributeComponent::StaticClass()));
 		if (AttributeComp)
 		{
-			AttributeComp->ApplyHealthChange(-20.0f);
-
-			Destroy();
+			// minus in front of DamageAmount to apply the change as damage, not healing
+			AttributeComp->ApplyHealthChange(GetInstigator(), -DamageAmount);
+			
+			// Only explode when we hit something valid
+			Explode();
 		}
 	}
 }
-
-// Called every frame
-void ASMagicProjectile::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-
-}
-

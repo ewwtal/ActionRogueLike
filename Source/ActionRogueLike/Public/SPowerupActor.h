@@ -3,11 +3,13 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "SGameplayInterface.h"
 #include "GameFramework/Actor.h"
+#include "SGameplayInterface.h"
 #include "SPowerupActor.generated.h"
 
+
 class USphereComponent;
+
 
 UCLASS()
 class ACTIONROGUELIKE_API ASPowerupActor : public AActor, public ISGameplayInterface
@@ -30,12 +32,13 @@ protected:
 
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 	USphereComponent* SphereComp;
-	
+
 public:
 
 	void Interact_Implementation(APawn* InstigatorPawn) override;
-	
-	// Sets default values for this actor's properties
+
+public:
+
 	ASPowerupActor();
 
 };
