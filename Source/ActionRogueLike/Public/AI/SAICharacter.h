@@ -22,6 +22,9 @@ public:
 
 protected:
 
+	UPROPERTY(VisibleAnywhere, Category = "Effects")
+	FName TimeToHitParamName;
+
 	virtual void PostInitializeComponents() override;
 
 	UFUNCTION()
