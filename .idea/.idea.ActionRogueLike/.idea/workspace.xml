@@ -7,14 +7,12 @@
   <component name="ChangeListManager">
     <list default="true" id="feec9ab7-0a0d-40b3-86b3-434bd063588d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ActionRogueLike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ActionRogueLike/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ActionRogueLike.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/ActionRogueLike.uproject" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/AI/MinionRangedBP.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/AI/MinionRangedBP.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/Maps/TestLevel.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/Maps/TestLevel.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/PlayerCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/PlayerCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ActionRogueLike/UI/PlayerHealth_Widget.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRogueLike/UI/PlayerHealth_Widget.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/ActionRogueLike.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/ActionRogueLike.Build.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Private/AI/SAICharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Private/AI/SAICharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Public/AI/SAICharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Public/AI/SAICharacter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SAttributeComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SAttributeComponent.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SGameModeBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SGameModeBase.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SAttributeComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SAttributeComponent.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SCharacter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SGameModeBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SGameModeBase.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,7 +271,8 @@
       <workItem from="1661900390772" duration="3321000" />
       <workItem from="1661904513915" duration="9076000" />
       <workItem from="1661992458206" duration="7009000" />
-      <workItem from="1662054002117" duration="6598000" />
+      <workItem from="1662054002117" duration="7282000" />
+      <workItem from="1662134097928" duration="2212000" />
     </task>
     <servers />
   </component>
