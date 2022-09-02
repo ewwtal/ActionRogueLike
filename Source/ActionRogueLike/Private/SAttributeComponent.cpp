@@ -3,6 +3,8 @@
 
 #include "SAttributeComponent.h"
 
+#include "SGameModeBase.h"
+
 
 USAttributeComponent::USAttributeComponent()
 {
@@ -16,6 +18,7 @@ bool USAttributeComponent::Kill(AActor* InstigatorActor)
 	return ApplyHealthChange(InstigatorActor, -GetHealthMax());
 }
 
+
 bool USAttributeComponent::IsAlive() const
 {
 	return Health > 0.0f;
@@ -27,6 +30,11 @@ bool USAttributeComponent::IsFullHealth() const
 	return Health == HealthMax;
 }
 
+
+float USAttributeComponent::GetHealth() const
+{
+	return Health;
+}
 
 float USAttributeComponent::GetHealthMax() const
 {
@@ -40,14 +48,23 @@ bool USAttributeComponent::ApplyHealthChange(AActor* InstigatorActor, float Delt
 	{
 		return false;
 	}
-	
+
 	float OldHealth = Health;
 
 	Health = FMath::Clamp(Health + Delta, 0.0f, HealthMax);
 
 	float ActualDelta = Health - OldHealth;
-	OnHealthChanged.Broadcast(InstigatorActor, this, Health, ActualDelta); // @fixme: Still nullptr for InstigatorActor parameter
+	OnHealthChanged.Broadcast(InstigatorActor, this, Health, ActualDelta);
 
+	if (ActualDelta < 0.0f && Health == 0.0f)
+	{
+		ASGameModeBase* GM = Cast<ASGameModeBase>(GetWorld()->GetAuthGameMode<ASGameModeBase>());
+		if (GM)
+		{
+			GM->OnActorKilled(GetOwner(), InstigatorActor);
+		}
+	}
+	
 	return ActualDelta != 0;
 }
 
@@ -61,6 +78,7 @@ USAttributeComponent* USAttributeComponent::GetAttributes(AActor* FromActor)
 	return nullptr;
 }
 
+
 bool USAttributeComponent::IsActorAlive(AActor* Actor)
 {
 	USAttributeComponent* AttributeComp = GetAttributes(Actor);
@@ -71,3 +89,4 @@ bool USAttributeComponent::IsActorAlive(AActor* Actor)
 
 	return false;
 }
+

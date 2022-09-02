@@ -2,9 +2,13 @@
 
 
 #include "SWorldUserWidget.h"
-#include "Blueprint/WidgetLayoutLibrary.h"
 #include "Kismet/GameplayStatics.h"
+#include "Blueprint/WidgetLayoutLibrary.h"
 #include "Components/SizeBox.h"
+
+
+
+
 
 void USWorldUserWidget::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
 {
@@ -12,10 +16,9 @@ void USWorldUserWidget::NativeTick(const FGeometry& MyGeometry, float InDeltaTim
 
 	if (!IsValid(AttachedActor))
 	{
-		//same as remove from viewport
 		RemoveFromParent();
 
-		UE_LOG(LogTemp, Warning, TEXT("AttachedActor is no longer valid, removing Health Widget"));
+		UE_LOG(LogTemp, Warning, TEXT("AttachedActor no longer valid, removing Health Widget."));
 		return;
 	}
 

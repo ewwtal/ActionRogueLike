@@ -5,12 +5,9 @@
 #include "Components/StaticMeshComponent.h"
 
 
-// Sets default values
+
 ASItemChest::ASItemChest()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
-
 	BaseMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("BaseMesh"));
 	RootComponent = BaseMesh;
 
@@ -20,8 +17,8 @@ ASItemChest::ASItemChest()
 	TargetPitch = 110;
 }
 
+
 void ASItemChest::Interact_Implementation(APawn* InstigatorPawn)
 {
 	LidMesh->SetRelativeRotation(FRotator(TargetPitch, 0, 0));
 }
-

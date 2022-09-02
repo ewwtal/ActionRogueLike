@@ -7,8 +7,8 @@
 #include "SAICharacter.generated.h"
 
 
-class USAttributeComponent;
 class UPawnSensingComponent;
+class USAttributeComponent;
 class UUserWidget;
 class USWorldUserWidget;
 
@@ -31,6 +31,8 @@ protected:
 	UPROPERTY(VisibleAnywhere, Category = "Effects")
 	FName TimeToHitParamName;
 
+	void SetTargetActor(AActor* NewTarget);
+
 	virtual void PostInitializeComponents() override;
 
 	UFUNCTION()
@@ -38,12 +40,10 @@ protected:
 
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 	UPawnSensingComponent* PawnSensingComp;
-	
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
 	USAttributeComponent* AttributeComp;
 
-	void SetTargetActor(AActor* NewTarget);
-	
 	UFUNCTION()
 	void OnPawnSeen(APawn* Pawn);
 };
