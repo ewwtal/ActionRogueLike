@@ -5,6 +5,8 @@
 #include "CoreMinimal.h"
 #include "SAction.generated.h"
 
+class UWorld;
+
 /**
  * 
  */
@@ -23,4 +25,6 @@ public:
 
 	UPROPERTY(EditDefaultsOnly, Category = "Action")
 	FName ActionName;
+
+	UWorld* GetWorld() const override;
 };
