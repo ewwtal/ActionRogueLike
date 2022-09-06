@@ -22,6 +22,9 @@ void USActionComponent::BeginPlay()
 void USActionComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+
+	FString DebugMsg = GetNameSafe(GetOwner()) + " : " + ActiveGameplayTags.ToStringSimple();
+	GEngine->AddOnScreenDebugMessage(-1, 0.0f, FColor::White, DebugMsg);
 }
 
 void USActionComponent::AddAction(TSubclassOf<USAction> ActionClass)
