@@ -7,12 +7,9 @@
   <component name="ChangeListManager">
     <list default="true" id="feec9ab7-0a0d-40b3-86b3-434bd063588d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ActionRogueLike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ActionRogueLike/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Private/AI/SAICharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Private/AI/SAICharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SAttributeComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SAttributeComponent.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ActionRogueLike.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/ActionRogueLike.uproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SGameModeBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SGameModeBase.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SInteractionComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SInteractionComponent.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SMagicProjectile.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Private/SMagicProjectile.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRogueLike/Public/SCharacter.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -274,7 +271,8 @@
       <workItem from="1661992458206" duration="7009000" />
       <workItem from="1662054002117" duration="7282000" />
       <workItem from="1662134097928" duration="2921000" />
-      <workItem from="1662137492824" duration="11359000" />
+      <workItem from="1662137492824" duration="16095000" />
+      <workItem from="1662483470045" duration="606000" />
     </task>
     <servers />
   </component>
