@@ -2,15 +2,18 @@
 
 
 #include "SAction_ProjectileAttack.h"
-
-#include "GameFramework/Character.h"
 #include "Kismet/GameplayStatics.h"
+#include "GameFramework/Character.h"
+
+
+
 
 USAction_ProjectileAttack::USAction_ProjectileAttack()
 {
 	HandSocketName = "Muzzle_01";
 	AttackAnimDelay = 0.2f;
 }
+
 
 void USAction_ProjectileAttack::StartAction_Implementation(AActor* Instigator)
 {
@@ -27,14 +30,10 @@ void USAction_ProjectileAttack::StartAction_Implementation(AActor* Instigator)
 		FTimerDelegate Delegate;
 		Delegate.BindUFunction(this, "AttackDelay_Elapsed", Character);
 
-		// Can't do GetWorldTimerManager cuz this doesn't derive from AActor
 		GetWorld()->GetTimerManager().SetTimer(TimerHandle_AttackDelay, Delegate, AttackAnimDelay, false);
-
-		
 	}
-
-	
 }
+
 
 void USAction_ProjectileAttack::AttackDelay_Elapsed(ACharacter* InstigatorCharacter)
 {

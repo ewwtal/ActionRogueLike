@@ -2,11 +2,11 @@
 
 
 #include "SMagicProjectile.h"
-
-#include "SActionComponent.h"
-#include "SGameplayFunctionLibrary.h"
 #include "Components/SphereComponent.h"
+#include "SGameplayFunctionLibrary.h"
+#include "SActionComponent.h"
 #include "GameFramework/ProjectileMovementComponent.h"
+#include "SActionEffect.h"
 
 
 ASMagicProjectile::ASMagicProjectile()
@@ -22,10 +22,8 @@ void ASMagicProjectile::OnActorOverlap(UPrimitiveComponent* OverlappedComponent,
 {
 	if (OtherActor && OtherActor != GetInstigator())
 	{
-		//FName Muzzle = "Muzzle_01";
-
 		//static FGameplayTag Tag = FGameplayTag::RequestGameplayTag("Status.Parrying");
-		
+
 		USActionComponent* ActionComp = Cast<USActionComponent>(OtherActor->GetComponentByClass(USActionComponent::StaticClass()));
 		if (ActionComp && ActionComp->ActiveGameplayTags.HasTag(ParryTag))
 		{
@@ -34,12 +32,15 @@ void ASMagicProjectile::OnActorOverlap(UPrimitiveComponent* OverlappedComponent,
 			SetInstigator(Cast<APawn>(OtherActor));
 			return;
 		}
-	
-		if (OtherActor && OtherActor != GetInstigator())
+
+		// Apply Damage & Impulse
+		if (USGameplayFunctionLibrary::ApplyDirectionalDamage(GetInstigator(), OtherActor, DamageAmount, SweepResult))
 		{
-			if (USGameplayFunctionLibrary::ApplyDirectionalDamage(GetInstigator(), OtherActor, DamageAmount, SweepResult))
+			Explode();
+
+			if (ActionComp)
 			{
-				Explode();
+				ActionComp->AddAction(GetInstigator(), BurningActionClass);
 			}
 		}
 	}

@@ -13,7 +13,7 @@ UCLASS()
 class ACTIONROGUELIKE_API USGameplayFunctionLibrary : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()
-
+	
 public:
 
 	UFUNCTION(BlueprintCallable, Category = "Gameplay")
@@ -21,4 +21,6 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Gameplay")
 	static bool ApplyDirectionalDamage(AActor* DamageCauser, AActor* TargetActor, float DamageAmount, const FHitResult& HitResult);
+
+
 };
